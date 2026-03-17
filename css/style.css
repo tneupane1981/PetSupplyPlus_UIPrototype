@@ -1,84 +1,34 @@
-.header {
-    background-color: #f8f9fa;
+/* Improved Header Design */
+header {
+    background: #4CAF50; /* A nice green color */
+    color: white;
     padding: 20px;
     text-align: center;
 }
 
-.navigation {
-    display: flex;
-    justify-content: space-around;
-    background-color: #343a40;
+/* Typography Improvements */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3 {
+    font-weight: bold;
+    color: #333; /* Darker color for better readability */
 }
 
-.navigation a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
+/* Spacing Adjustments */
+p {
+    margin: 20px 0;
 }
 
-.navigation a:hover {
-    background-color: #495057;
-}
-
-.hero {
-    background: url('hero-image.jpg') no-repeat center center;
-    background-size: cover;
-    height: 400px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.card {
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    padding: 15px;
-    text-align: center;
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-.footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
+/* Responsive Layout */
 @media (max-width: 768px) {
-    .navigation {
-        flex-direction: column;
+    header {
+        padding: 15px;
+    }
+    body {
+        padding: 10px;
     }
 }
