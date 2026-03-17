@@ -1,0 +1,89 @@
+/* PetSupplyPlus — Responsive E-commerce UI Prototype (UI only)
+   External CSS only. No inline styling.
+*/
+:root{
+  --primary:#1d4ed8; --secondary:#22c55e; --accent:#f59e0b;
+  --text:#0b1220; --muted:#5b667a; --bg:#f6f8fb; --card:#ffffff;
+  --border:#e4e8f0; --shadow:0 10px 25px rgba(15,23,42,.08);
+  --radius:16px; --container:1180px; --focus:rgba(29,78,216,.28);
+  --font:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.5}
+img{max-width:100%;display:block}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+p{margin:0 0 12px;color:var(--muted)}
+h1,h2,h3{color:var(--text);margin:0 0 10px}
+h1{font-size:44px;line-height:1.05}
+h2{font-size:26px}
+h3{font-size:18px}
+.container{max-width:var(--container);margin:0 auto;padding:0 18px}
+.skip-link{position:absolute;left:-9999px;top:10px;background:#111827;color:#fff;padding:10px 12px;border-radius:12px;z-index:999}
+.skip-link:focus{left:12px;outline:3px solid var(--focus)}
+.header{position:sticky;top:0;z-index:50;background:rgba(246,248,251,.92);backdrop-filter: blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px;color:inherit;font-weight:900}
+.brand-badge{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#60a5fa,#34d399)}
+.brand small{display:block;color:var(--muted);font-weight:700;margin-top:2px}
+.nav-toggle{display:none;border:1px solid var(--border);background:var(--card);border-radius:12px;padding:10px 12px;font-weight:800}
+.nav{display:flex;align-items:center}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;flex-wrap:wrap}
+.nav a{display:block;padding:10px 12px;border-radius:12px;color:#1f2937;font-weight:750}
+.nav a[aria-current="page"]{background:#e8f0ff;color:#111827}
+.badge{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:18px;padding:0 6px;margin-left:6px;border-radius:999px;background:var(--primary);color:#fff;font-size:12px}
+.is-hidden{display:none !important}
+
+/* --- Site map flow diagram --- */
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:12px}
+.flow-step{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--border);background:var(--card);font-weight:700;text-decoration:none}
+.flow-step:hover{box-shadow:var(--shadow)}
+.flow-arrow{opacity:.7;font-weight:800}
+@media (max-width: 920px){
+  .nav-toggle{display:inline-flex}
+  .nav{display:none;width:100%}
+  .nav.is-open{display:block}
+  .nav ul{flex-direction:column;gap:6px;padding:10px 0}
+  .header-inner{flex-wrap:wrap}
+}
+.breadcrumbs{margin:16px 0}
+.breadcrumbs ol{list-style:none;margin:0;padding:0;display:flex;gap:8px;flex-wrap:wrap;color:var(--muted);font-weight:700;font-size:14px}
+.breadcrumbs li:not(:last-child)::after{content:"/";margin-left:8px;color:#94a3b8}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}
+.pad{padding:16px}
+.hero{background:linear-gradient(135deg,#e7f0ff,#e9fbef);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow);padding:28px}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.col-8{grid-column:span 8}.col-4{grid-column:span 4}.col-6{grid-column:span 6}
+@media (max-width: 900px){.col-8,.col-4,.col-6{grid-column:span 12}}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#fff;color:#111827;font-weight:800;cursor:pointer}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn.secondary{background:var(--secondary);border-color:var(--secondary);color:#fff}
+.btn:focus{outline:3px solid var(--focus);outline-offset:2px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.kpi{background:rgba(255,255,255,.75);border:1px solid var(--border);border-radius:14px;padding:12px}
+.kpi strong{display:block}
+.kpi span{color:var(--muted);font-weight:700;font-size:13px}
+@media (max-width: 780px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:22px 0 12px}
+.section-title p{margin:0}
+.notice{border-radius:14px;border:1px solid #bfe7ff;background:#e8f7ff;padding:12px;color:#0b1220;font-weight:700}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width: 980px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width: 560px){.product-grid{grid-template-columns:1fr}}
+.thumb{border-bottom:1px solid var(--border);border-radius:18px 18px 0 0;overflow:hidden;background:linear-gradient(135deg,#1d4ed8,#34d399);height:140px;display:flex;align-items:center;justify-content:center}
+.product-body{padding:14px}
+.small{font-size:13px}
+.flex-between{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.price{font-weight:900}
+.m0{margin:0}.mt-10{margin-top:10px}.mt-12{margin-top:12px}.mb-10{margin-bottom:10px}.pl-18{padding-left:18px}
+input,select,textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--border);font:inherit;background:#fff}
+label{font-weight:800}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:780px){.form-grid{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse}
+th,td{border-bottom:1px solid var(--border);padding:10px;text-align:left}
+.footer{margin-top:26px;padding:18px 0;border-top:1px solid var(--border);background:rgba(246,248,251,.92)}
+.footer-inner{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;color:var(--muted);font-weight:700;font-size:14px}
+.visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}

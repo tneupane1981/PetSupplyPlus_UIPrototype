@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="PetSupplyPlus responsive e-commerce UI prototype">
+<title>Checkout | PetSupply Plus</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Pet Supply Plus Home">
+      <span class="brand-badge" aria-hidden="true"></span>
+      <span>PetSupply Plus<small>Responsive E‑commerce UI Prototype</small></span>
+    </a>
+
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primaryNav">Menu</button>
+
+    <nav class="nav" id="primaryNav" data-nav aria-label="Primary navigation">
+      <ul>
+        <li><a data-page="index.html" href="index.html">Home</a></li><li><a data-page="shop.html" href="shop.html">Shop</a></li><li><a data-page="cart.html" href="cart.html">Cart <span class="badge is-hidden" data-cart-badge>0</span></a></li><li><a data-page="order-status.html" href="order-status.html">Track Order</a></li><li><a data-page="chat.html" href="chat.html">Chat</a></li><li><a data-page="about.html" href="about.html">About</a></li><li><a data-page="contact.html" href="contact.html">Contact</a></li><li><a data-page="faq.html" href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="container" tabindex="-1">
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="index.html">Home</a></li><li aria-current="page">Checkout</li>
+    </ol>
+  </nav>
+
+  
+<div class="section-title"><h2>Checkout</h2><p>Shipping + payment form (UI only)</p></div>
+<form class="card pad" data-checkout-form aria-label="Checkout form">
+  <h3 class="m0 mb-10">Shipping</h3>
+  <div class="form-grid">
+    <div><label for="first">First name *</label><input id="first" required></div>
+    <div><label for="last">Last name *</label><input id="last" required></div>
+  </div>
+  <div class="mt-12"><label for="address">Address *</label><input id="address" required placeholder="1234 Pet Street"></div>
+  <div class="form-grid mt-12">
+    <div><label for="city">City *</label><input id="city" required placeholder="Fort Worth"></div>
+    <div><label for="state">State *</label><input id="state" required placeholder="TX"></div>
+  </div>
+  <div class="form-grid mt-12">
+    <div><label for="zip">ZIP *</label><input id="zip" required placeholder="12345"></div>
+    <div><label for="email">Email *</label><input id="email" required placeholder="you@example.com"></div>
+  </div>
+  <h3 class="mt-12 mb-10">Payment (prototype)</h3>
+  <div class="form-grid">
+    <div><label for="card">Card number *</label><input id="card" required placeholder="0000 0000 0000 0000"></div>
+    <div><label for="exp">Expiry *</label><input id="exp" required placeholder="MM/YY"></div>
+  </div>
+  <div class="form-grid mt-12">
+    <div><label for="cvv">CVV *</label><input id="cvv" required placeholder="123"></div>
+    <div><label for="billzip">Billing ZIP *</label><input id="billzip" required placeholder="12345"></div>
+  </div>
+  <div class="actions">
+    <a class="btn" href="cart.html">Back to cart</a>
+    <button class="btn primary" type="submit">Place order</button>
+  </div>
+  <div class="notice mt-12"><strong>Important:</strong> No payment is processed. This is UI-only.</div>
+</form>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><strong>© 2026 PetSupply Plus</strong> — UI Prototype (no backend functionality)</div>
+    <div>Last updated: March 16, 2026 • <a href="mailto:aroberts@petsupplyplus.com">aroberts@petsupplyplus.com</a> • <a href="sitemap.html">Site map</a> • <a href="concept.html">Concept</a> • <a href="wireframes.html">Wireframes</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
